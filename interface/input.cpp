@@ -40,7 +40,7 @@ namespace Input
 
   // Buffer sizes
   const U32 KEYBUFSIZE = 32;
-  const U32 MOUSEBUFSIZE = 32;
+  const U32 MOUSEBUFSIZE = 64; //32 was not capturing enough events on my corsair mouse resulting in "stuck" pointer when moving fast
 
   // Mouse buttons
   const U32 MAXBUTTONS = 4;
