@@ -293,6 +293,8 @@ namespace Sound
         // Get number of tracks on disc
         U32 count = AIL_redbook_tracks(driver);
 
+		LOG_DIAG(("Redbook::Play - Track count %d", count));
+
         // Clip track into acceptable range
         if ((newTrack > count) || (newTrack < minTrack)) 
         {
