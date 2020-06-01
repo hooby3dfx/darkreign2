@@ -561,6 +561,7 @@ namespace Vid
         curDD = ChooseDriverDD();
       }
       Config::Setup();
+	  CurD3D().SetCaps();//this fixes the non-32 bit textures at launch bug!!!
       Settings::SetupTex();
     }
     Vid::isStatus.enumDD = TRUE;
@@ -1059,6 +1060,7 @@ namespace Vid
 
   void DriverD3D::SetCaps()
 	{
+	  LOG_DIAG(("DriverD3D::SetCaps"));
     Vid::caps.clipGuard  = clipGuard;
 
     Vid::caps.hardTL     = hardTL;
